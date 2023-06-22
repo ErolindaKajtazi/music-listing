@@ -30,7 +30,7 @@ const Contact = () => {
     setEmail("");
     setMessage("");
 
-    alert("Form submitted successfully!");
+    alert("Form submitted successfull y!");
   };
 
   return (
