@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/header/Header";
+import Homepage from "./pages/homepage/Homepage";
+import MusicList from "./pages/musicList/MusicList";
+import SingleAlbum from './pages/album/SingleAlbum'
+import Wishlist from "./pages/wishlist/Wishlist";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="wrapper">
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route exact path='/' element={<Homepage />} />
+            <Route exact path="/album" element={<MusicList />} />
+            <Route exact path="/album/:id" element={<SingleAlbum />} />
+            <Route exact path="/wishlist" element={<Wishlist />} />
+            <Route exact path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
