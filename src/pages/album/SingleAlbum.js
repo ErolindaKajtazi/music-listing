@@ -21,10 +21,12 @@ const SingleAlbum = () => {
   return (
     <div className="album-container">
       <h1>Single Album Page</h1>
+      <p className="al-desc">Details about this particular album (song)...</p>
       <div className="album">
-        <h2>{album?.title}</h2>
-        <p>{album?.artist}</p>
-        <p>{album?.genre}</p>
+      <ion-icon name="musical-notes-outline" size={80}></ion-icon>
+        <h2>Song: {album?.title}</h2>
+        <p>Artist: {album?.singer}</p>
+        <p>Genre: {album?.genre}</p>
       </div>
     </div>
   );

@@ -17,7 +17,10 @@ const Wishlist = () => {
         {wishlist.map((album) => (
           <li key={album.id}>
             {album.title} - {album.artist}
-            <button onClick={() => handleRemoveFromWishlist(album.id)}>
+            <button
+              className="btn wishlist-btn"
+              onClick={() => handleRemoveFromWishlist(album.id)}
+            >
               Remove
             </button>
           </li>

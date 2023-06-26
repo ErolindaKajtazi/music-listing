@@ -1,11 +1,18 @@
 .wishlist-container {
     color: white;
+    height: 100vh;
 
     .wishlist {
         border: 1px solid red;
+        padding: 10px;
+        list-style: none;
 
         button {
             background-color: red;
+        }
+
+        li {
+            padding: 10px;
         }
     }
 }

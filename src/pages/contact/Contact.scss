@@ -1,0 +1,36 @@
+.contact-container {
+    height: 100vh;
+    text-align: center;
+
+    form {
+        
+        max-width: 100%;
+        width: 60%;
+        position: relative;
+        top: 0;
+        left: 20%;
+        right: 30%;
+        label {
+            width: 20%;
+            margin: 10px 0;
+        }
+        input, textarea {
+            width: 50%;
+            margin: 10px 0;
+            background: none;
+            background-color: white;
+            border: none;
+        }
+
+        textarea {
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 30px;
+            background-color: red;
+        }
+
+    
+    }
+}

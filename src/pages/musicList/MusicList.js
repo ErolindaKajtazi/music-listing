@@ -23,18 +23,16 @@ const MusicList = () => {
 
   return (
     <div className="song-container">
-      <h1>Music List</h1>
+      <h1 className="music-header">Music List</h1>
       <ul className="song-list">
         {songs.map((song) => (
-          <li key={song.id}>
+          <div key={song.id} className="song">
+            <ion-icon name="musical-notes-outline" size={80}></ion-icon>
             <Link to={`/album/${song.id}`}>{song.title}</Link>
-            <div>
-              {" "}
-              <button onClick={() => handleAddToWishlist(song)}>
-                Add to Wishlist
-              </button>
-            </div>
-          </li>
+            <button className="btn music-btn" onClick={() => handleAddToWishlist(song)}>
+              Add to Wishlist
+            </button>
+          </div>
         ))}
       </ul>
     </div>
